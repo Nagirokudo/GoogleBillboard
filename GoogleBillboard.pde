@@ -5,17 +5,18 @@ public void setup()
 	String digits = e.substring(2, 12);
 	double dNum = Double.parseDouble(digits);
 	System.out.println(dNum);
+	for (int i = 2; i < e.length()-10; i++)
+	{
+		if (isPrime(Double.parseDouble(e.substring(i, i+10))) == true)
+		{
+			System.out.println(e.substring(i, i+10));
+		}
+	}
     noLoop();  
 }  
 public void draw()  
 {   
 	//not needed for this assignment
-	for (int p = 0; p < e.length()-1; p++)
-	{
-		double dNum = Double.parseDouble(e.substring(p, p+10));
-		System.out.println(dNum);
-	}
-
 }  
 public boolean isPrime(double dNum)  
 {   
